@@ -4,21 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Jugador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Nodo.java" afterDir="false" />
+    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="first">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" afterDir="false" />
+    </list>
+    <list id="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" name="Changes by Joshua" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,6 +43,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "C:/Users/marco/IdeaProjects/AlgoritmosProyect/src/main/java/org/algoritmos",
@@ -56,8 +64,16 @@
       <option name="presentableId" value="Default" />
       <updated>1670178203023</updated>
       <workItem from="1670178205020" duration="232000" />
-      <workItem from="1670178668892" duration="648000" />
+      <workItem from="1670178668892" duration="4504000" />
     </task>
+    <task id="LOCAL-00001" summary="first">
+      <created>1670179504375</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670179504375</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,10 +84,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
   </component>
 </project>
