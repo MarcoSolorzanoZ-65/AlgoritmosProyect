@@ -1,5 +1,7 @@
 package org.algoritmos;
 
+import javax.swing.*;
+
 /**
  * @author : marco
  * @created : 12/4/2022, Sunday
@@ -19,31 +21,49 @@ public class Juego {
         while (jugar) {
             for (int i = 0; i < lj.size(); i++) {
                 Jugador jugador = lj.buscarJugador(i);
-                int dice1 = dice();
-                int dice2 = dice();
-                sumDice(jugador, dice1, dice2);
-                if (dice1 == 6 && dice2 == 6) {
-                    boolean dobles = true;
-                    int doubleCount = 0;
-                    jugador.setPosicion(jugador.getPosicion() + (dice1 + dice2));
-                    jugador.setScore(jugador.getScore() + (dice1 + dice2));
-                    while (dobles || doubleCount != 2) {
-                        int goldenDice1 = dice();
-                        int goldenDice2 = dice();
-                        if (goldenDice1 == 6 && goldenDice2 == 6) {
-                            jugador.setPosicion(jugador.getPosicion() + (goldenDice1 + goldenDice2));
-                            jugador.setScore(jugador.getScore() + (goldenDice1 + goldenDice2));
-                            doubleCount++;
-                        } else {
-                            sumDice(jugador, goldenDice1, goldenDice2);
-                            jugador.setPosicion(jugador.getPosicion() + (goldenDice1 + goldenDice2));
-                            jugador.setScore(jugador.getScore() + (goldenDice1 + goldenDice2));
-                            dobles = false;
+                if (jugador.getScore() >= 84) {
+                    jugar = false;
+                    JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                }else{
+                    int dice1 = dice();
+                    int dice2 = dice();
+                    sumDice(jugador, dice1, dice2);
+                    if (dice1 == 6 && dice2 == 6) {
+                        boolean dobles = true;
+                        int doubleCount = 0;
+                        jugador.setPosicion(jugador.getPosicion() + (dice1 + dice2));
+                        checkPos(jugador, jugador.getPosicion());
+                        jugador.setScore(jugador.getScore() + (dice1 + dice2));
+                        while (dobles || doubleCount != 2) {
+                            int goldenDice1 = dice();
+                            int goldenDice2 = dice();
+                            if (goldenDice1 == 6 && goldenDice2 == 6) {
+                                jugador.setPosicion(jugador.getPosicion() + (goldenDice1 + goldenDice2));
+                                checkPos(jugador, jugador.getPosicion());
+                                jugador.setScore(jugador.getScore() + (goldenDice1 + goldenDice2));
+                                doubleCount++;
+                            } else {
+                                sumDice(jugador, goldenDice1, goldenDice2);
+                                jugador.setPosicion(jugador.getPosicion() + (goldenDice1 + goldenDice2));
+                                checkPos(jugador, jugador.getPosicion());
+                                jugador.setScore(jugador.getScore() + (goldenDice1 + goldenDice2));
+                                dobles = false;
+                            }
                         }
+                    } else {
+                        jugador.setPosicion(jugador.getPosicion() + (dice1 + dice2));
+                        checkPos(jugador, jugador.getPosicion());
+                        jugador.setScore(jugador.getScore() + (dice1 + dice2));
                     }
-                } else {
-                    jugador.setPosicion(jugador.getPosicion() + (dice1 + dice2));
-                    jugador.setScore(jugador.getScore() + (dice1 + dice2));
+
+                    ListaJugadores ljScores = new ListaJugadores();
+                    ljScores = lj;
+                    ljScores.ordenar();
+                    String ScorePlayers = "Progreso actual de los jugadores:\n";
+                    for (int x = 0; x < ljScores.size(); x++) {
+                        ScorePlayers += "#" + x + ": " + ljScores.buscarJugador(x).getUsuario() + ", puntuacion: " + ljScores.buscarJugador(x).getScore();
+                    }
+                    JOptionPane.showMessageDialog(null, ScorePlayers);
                 }
             }
         }
