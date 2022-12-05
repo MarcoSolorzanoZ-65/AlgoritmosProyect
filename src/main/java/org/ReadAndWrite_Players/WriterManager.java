@@ -1,17 +1,11 @@
-package org.ReadAndWrite;
+package org.ReadAndWrite_Players;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import org.PlayerRelated.Jugador;
+import org.PlayerRelated.ListaJugadores;
 
-import org.algoritmos.Jugador;
-import org.algoritmos.ListaJugadores;
-
-/**
- * @author Marco Zumbado Solorzano carne C18736
- * @date 2021-08-16
- * @time 10:13:20
- */
 public class WriterManager {
 
     private BufferedWriter writer;

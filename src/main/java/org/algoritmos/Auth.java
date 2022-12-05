@@ -1,7 +1,9 @@
 package org.algoritmos;
 
+import org.PlayerRelated.Jugador;
+import org.PlayerRelated.ListaJugadores;
+
 import javax.swing.*;
-import java.util.Objects;
 
 /**
  * @author : marco

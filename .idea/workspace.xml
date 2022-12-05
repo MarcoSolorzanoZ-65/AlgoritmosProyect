@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="checks">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite/ReaderManager_MS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite/WriterManager_MS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Auth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="Read And Write and a bit auth">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaJugadores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_Players/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite/ReaderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_Players/ReaderManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite/WriterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_Players/WriterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Auth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Jugador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Nodo.java" afterDir="false" />
     </list>
     <list id="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" name="Changes by Joshua" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Nodo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,37 +36,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="4" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="14" end1="15" start2="16" end2="17" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="16" end1="17" start2="18" end2="19" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="18" end1="19" start2="20" end2="21" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="23" end1="23" start2="25" end2="26" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="25" end1="26" start2="28" end2="29" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="27" end1="28" start2="30" end2="31" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="29" end1="30" start2="32" end2="33" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="34" end1="34" start2="37" end2="88" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java">
       <ranges>
-        <range start1="10" end1="11" start2="10" end2="15" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="29" end1="30" start2="33" end2="36" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="31" end1="31" start2="37" end2="38" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="35" end1="35" start2="42" end2="43" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="36" end1="36" start2="44" end2="47" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="39" end1="39" start2="50" end2="53" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="40" end1="41" start2="54" end2="56" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="42" end1="43" start2="57" end2="62" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="45" end1="47" start2="64" end2="65" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="48" end1="49" start2="66" end2="71" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="53" end1="54" start2="75" end2="76" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="55" end1="56" start2="77" end2="82" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="70" end1="70" start2="96" end2="107" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="75" end1="77" start2="112" end2="115" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="79" end1="79" start2="117" end2="118" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="83" end1="88" start2="122" end2="142" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="2" end1="2" start2="2" end2="5" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="33" end1="34" start2="36" end2="40" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="35" end1="35" start2="41" end2="42" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="39" end1="39" start2="46" end2="47" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="40" end1="41" start2="48" end2="53" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="43" end1="43" start2="55" end2="59" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="44" end1="45" start2="60" end2="62" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="46" end1="47" start2="63" end2="69" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="49" end1="51" start2="71" end2="72" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="52" end1="53" start2="73" end2="79" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="57" end1="58" start2="83" end2="84" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="61" end1="62" start2="87" end2="89" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="71" end1="72" start2="98" end2="99" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="94" end1="96" start2="121" end2="124" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="97" end1="97" start2="125" end2="127" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="98" end1="98" start2="128" end2="129" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="102" end1="107" start2="133" end2="157" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
       </ranges>
     </file>
   </component>
@@ -107,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670178203023</updated>
       <workItem from="1670178205020" duration="232000" />
-      <workItem from="1670178668892" duration="12385000" />
+      <workItem from="1670178668892" duration="16505000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1670179504375</created>
@@ -130,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670190029969</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Read And Write and a bit auth">
+      <created>1670266783401</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670266783401</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +156,7 @@
     <MESSAGE value="first" />
     <MESSAGE value="Game logic" />
     <MESSAGE value="checks" />
-    <option name="LAST_COMMIT_MESSAGE" value="checks" />
+    <MESSAGE value="Read And Write and a bit auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read And Write and a bit auth" />
   </component>
 </project>

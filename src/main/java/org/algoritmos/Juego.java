@@ -1,5 +1,8 @@
 package org.algoritmos;
 
+import org.PlayerRelated.Jugador;
+import org.PlayerRelated.ListaJugadores;
+
 import javax.swing.*;
 
 /**
@@ -95,6 +98,8 @@ public class Juego {
     private void sumDice(Jugador j, int dice1, int dice2) {
         if ((dice1 + dice2) == 6) {
             j.setPosicion(j.getPosicion() - 1);
+            j.setScore(j.getScore() - 1);
+            JOptionPane.showMessageDialog(null, "Ambos dados suman 6, retrocede 1 posicion.");
         }
     }
 

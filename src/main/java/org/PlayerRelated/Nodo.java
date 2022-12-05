@@ -1,5 +1,6 @@
-package org.algoritmos;
+package org.PlayerRelated;
 
+//Clase Nodo aprendida en clases
 public class Nodo {
     private Jugador dato;
     private Nodo anterior, siguiente;

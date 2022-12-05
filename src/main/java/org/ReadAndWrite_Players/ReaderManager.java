@@ -1,18 +1,12 @@
-package org.ReadAndWrite;
+package org.ReadAndWrite_Players;
 
-import org.algoritmos.Jugador;
-import org.algoritmos.ListaJugadores;
-
+import org.PlayerRelated.Jugador;
+import org.PlayerRelated.ListaJugadores;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-/**
- * @author Marco Zumbado Solorzano carne C18736
- * @date 2021-08-16
- * @time 10:13:20
- */
 public class ReaderManager {
 
     private BufferedReader reader;
@@ -29,7 +23,7 @@ public class ReaderManager {
     public Jugador read() throws IOException {
         Jugador p = null;
         String line = reader.readLine(); //retorna null cuando no hay más registros
-        String datos[];
+        String[] datos;
         if (line != null) {
             p = new Jugador("", "");
             datos = line.split("-"); // separa el String en un array

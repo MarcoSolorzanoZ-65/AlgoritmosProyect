@@ -1,5 +1,6 @@
-package org.algoritmos;
+package org.PlayerRelated;
 
+//Clase jugador
 public class Jugador {
     private String usuario;
     private String password;

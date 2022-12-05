@@ -1,9 +1,8 @@
-package org.ReadAndWrite;
+package org.ReadAndWrite_Players;
 
 import java.io.IOException;
-
-import org.algoritmos.Jugador;
-import org.algoritmos.ListaJugadores;
+import org.PlayerRelated.Jugador;
+import org.PlayerRelated.ListaJugadores;
 
 public class Dao {
 
