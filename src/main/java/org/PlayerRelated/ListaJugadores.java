@@ -10,6 +10,10 @@ public class ListaJugadores {
     public ListaJugadores() {
     }
 
+    public Nodo getCabeza() {
+        return cabeza;
+    }
+
     private boolean estaVacia() {
         return cabeza == null;
     }
@@ -43,8 +47,7 @@ public class ListaJugadores {
             Nodo temp = cabeza;
             int pos = 0;
             while (temp != null) {
-                if (posicion ==
-                        +pos) {
+                if (posicion == pos) {
                     return temp.getDato();
                 }
                 temp = temp.getSiguiente();

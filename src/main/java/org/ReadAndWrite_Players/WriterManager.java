@@ -26,10 +26,13 @@ public class WriterManager {
     public void writeAll() throws IOException {
         for (int i = 0; i < lista.size(); i++) {
             Jugador e = lista.buscarJugador(i);
-            if (e != null) {
+            Jugador temp = null;
+            if (e != null && e != temp) {
                 write(e);
             }
+            temp = e;
         }
+        System.out.println("ok");
     }
 
     public void close() throws IOException {

@@ -23,61 +23,102 @@ public class Juego {
         }
     }
 
-    public void game() {
+    public boolean game() {
         boolean jugar = true;
         while (jugar) {
             for (int i = 0; i < lj.size(); i++) {
                 Jugador jugador = lj.buscarJugador(i);
-                if (jugador.getScore() >= 84) {
-                    jugar = false;
-                    JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
-                }else{
-                    int dice1 = dice();
-                    int dice2 = dice();
-                    sumDice(jugador, dice1, dice2);
-                    if (dice1 == 6 && dice2 == 6) {
-                        boolean dobles = true;
-                        int doubleCount = 0;
-                        jugador.setPosicion(jugador.getPosicion() + (dice1 + dice2));
-                        checkPos(jugador, jugador.getPosicion());
-                        jugador.setScore(jugador.getScore() + (dice1 + dice2));
-                        while (dobles || doubleCount != 2) {
-                            int goldenDice1 = dice();
-                            int goldenDice2 = dice();
-                            if (goldenDice1 == 6 && goldenDice2 == 6) {
-                                jugador.setPosicion(jugador.getPosicion() + (goldenDice1 + goldenDice2));
-                                checkPos(jugador, jugador.getPosicion());
-                                jugador.setScore(jugador.getScore() + (goldenDice1 + goldenDice2));
-                                doubleCount++;
-                            } else {
-                                sumDice(jugador, goldenDice1, goldenDice2);
-                                jugador.setPosicion(jugador.getPosicion() + (goldenDice1 + goldenDice2));
-                                checkPos(jugador, jugador.getPosicion());
-                                jugador.setScore(jugador.getScore() + (goldenDice1 + goldenDice2));
-                                dobles = false;
-                            }
-                        }
+                if (jugador.isTurno()) {
+                    if (jugador.getScore() >= 84) {
+                        jugar = false;
+                        JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                        return true;
                     } else {
-                        jugador.setPosicion(jugador.getPosicion() + (dice1 + dice2));
-                        checkPos(jugador, jugador.getPosicion());
-                        checkLaps(jugador);
-                        jugador.setScore(jugador.getScore() + (sumDice));
-                        JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nRonda actual: "
-                                + jugador.getLaps() + "\nPosicion: "
-                                + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
+                        int dice1 = dice();
+                        int dice2 = dice();
+                        int sumDice = sumDice(jugador, dice1, dice2);
+                        if (jugador.getScore() >= 84) {
+                            jugar = false;
+                            JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                            return true;
+                        }
+                        JOptionPane.showMessageDialog(null, "Jugador: " + jugador.getUsuario()
+                                + "\nDado 1: " + dice1 + "\nDado 2: " + dice2
+                                + "\nTotal: " + sumDice);
+                        if (sumDice == 6){
+                            JOptionPane.showMessageDialog(null, "Ambos dados suman 6, retrocede 1 posicion.");
+                        }
+                        if (dice1 == 6 && dice2 == 6) {
+                            JOptionPane.showMessageDialog(null, "Felicidades, ambos dados son un 6, repite turno!");
+                            boolean dobles = true;
+                            int doubleCount = 1;
+                            jugador.setPosicion(jugador.getPosicion() + (dice1 + dice2));
+                            checkPos(jugador, jugador.getPosicion());
+                            checkLaps(jugador);
+                            jugador.setScore(jugador.getScore() + (dice1 + dice2));
+                            JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nJugador: "
+                                    + jugador.getUsuario() + "\nRonda actual: "
+                                    + jugador.getLaps() + "\nPosicion: "
+                                    + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
+                            while (dobles && doubleCount != 2) {
+                                int goldenDice1 = dice();
+                                int goldenDice2 = dice();
+                                int sumGDice = sumDice(jugador, goldenDice1, goldenDice2);
+                                JOptionPane.showMessageDialog(null, "Jugador: " + jugador.getUsuario()
+                                        + "\nDado 1: " + goldenDice1 + "\nDado 2: " + goldenDice2
+                                        + "\nTotal: " + sumGDice);
+                                if (sumGDice == 6){
+                                    JOptionPane.showMessageDialog(null, "Ambos dados suman 6, retrocede 1 posicion.");
+                                }
+                                if (goldenDice1 == 6 && goldenDice2 == 6) {
+                                    JOptionPane.showMessageDialog(null, "Felicidades, ambos dados son un 6, repite turno nuevamente!");
+                                    jugador.setPosicion(jugador.getPosicion() + (sumGDice));
+                                    checkPos(jugador, jugador.getPosicion());
+                                    checkLaps(jugador);
+                                    jugador.setScore(jugador.getScore() + (sumGDice));
+                                    JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nJugador: "
+                                            + jugador.getUsuario() + "\nRonda actual: "
+                                            + jugador.getLaps() + "\nPosicion: "
+                                            + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
+                                    doubleCount++;
+                                } else {
+                                    jugador.setPosicion(jugador.getPosicion() + (sumGDice));
+                                    checkPos(jugador, jugador.getPosicion());
+                                    checkLaps(jugador);
+                                    jugador.setScore(jugador.getScore() + (sumGDice));
+                                    JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nJugador: "
+                                            + jugador.getUsuario() + "\nRonda actual: "
+                                            + jugador.getLaps() + "\nPosicion: "
+                                            + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
+                                    dobles = false;
+                                }
+                            }
+                        } else {
+                            jugador.setPosicion(jugador.getPosicion() + (sumDice));
+                            checkPos(jugador, jugador.getPosicion());
+                            checkLaps(jugador);
+                            jugador.setScore(jugador.getScore() + (sumDice));
+                            JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nJugador: "
+                                    + jugador.getUsuario() + "\nRonda actual: "
+                                    + jugador.getLaps() + "\nPosicion: "
+                                    + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
+                        }
                     }
-
-                    ListaJugadores ljScores = new ListaJugadores();
-                    ljScores = lj;
-                    ljScores.ordenar();
-                    String ScorePlayers = "Progreso actual de los jugadores:\n";
-                    for (int x = 0; x < ljScores.size(); x++) {
-                        ScorePlayers += "#" + x + ": " + ljScores.buscarJugador(x).getUsuario() + ", puntuacion: " + ljScores.buscarJugador(x).getScore();
-                    }
-                    JOptionPane.showMessageDialog(null, ScorePlayers);
+                } else {
+                    jugador.setTurno(true);
+                    JOptionPane.showMessageDialog(null, "El jugador " + jugador.getUsuario() + " perdio el turno la ronda pasada.");
                 }
+                ListaJugadores ljScores = new ListaJugadores();
+                ljScores = lj;
+                ljScores.ordenar(ljScores.getCabeza());
+                String ScorePlayers = "Progreso actual de los jugadores:\n";
+                for (int x = 0; x < ljScores.size(); x++) {
+                    ScorePlayers += "#" + (x + 1) + ": " + ljScores.buscarJugador(x).getUsuario() + ", puntuacion: " + ljScores.buscarJugador(x).getScore() + ".\n";
+                }
+                JOptionPane.showMessageDialog(null, ScorePlayers);
             }
-        }
+        } while (jugar);
+        return false;
     }
 
     public void checkLaps(Jugador jugador) {

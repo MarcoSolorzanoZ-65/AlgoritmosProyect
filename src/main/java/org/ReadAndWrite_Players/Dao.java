@@ -23,7 +23,7 @@ public class Dao {
         return true;
     }
 
-    public void cargarDatosPrueba() { // se agregar datos de prueba
+    public void cargarDatosPrueba() { // se agregan datos de prueba
         try {
             reader.open(FILE_NAME);
             reader.readAll();
@@ -35,7 +35,7 @@ public class Dao {
         }
     }
 
-    public void guardarLista(Jugador p) {
+    private void guardarLista(Jugador p) {
         try {
             writer.open(FILE_NAME);
             writer.writeAll();
