@@ -5,9 +5,10 @@ import org.PlayerRelated.ListaJugadores;
 import org.ReadAndWrite_Players.Dao;
 
 import javax.swing.*;
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ListaJugadores gameList = new ListaJugadores();
         ListaJugadores users = new ListaJugadores();
         Dao dao = new Dao(users);
@@ -26,7 +27,7 @@ public class Main {
                         boolean salir = false;
                         while (!salir) {
                             int cantBots = Integer.parseInt(JOptionPane.showInputDialog("Ingrese contra cuantos bots desea jugar (maximo 3)"));
-                            if (cantBots < 3) {
+                            if (cantBots <= 3) {
                                 salir = true;
                                 gameList.insertarFinal(player);
                                 juego.botCreate(cantBots);

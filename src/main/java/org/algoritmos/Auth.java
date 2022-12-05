@@ -35,7 +35,7 @@ public class Auth {
         return null;
     }
 
-    public void register() {
+    public boolean register() {
         String user = JOptionPane.showInputDialog("Ingrese su nombre de usuario");
         String pass = JOptionPane.showInputDialog("Ingrese su contraseña");
 
@@ -45,16 +45,17 @@ public class Auth {
         while (temp != null) {
             if (user.equals(temp.getDato().getUsuario())) {
                 JOptionPane.showMessageDialog(null, "Este nombre de usuario ya existe!");
-            }else{
-                if (pass.equals(pass2)) {
-                    Jugador j = new Jugador(user, pass);
-                    filemanager.insertar(j);
-                }else{
-                    JOptionPane.showMessageDialog(null, "Las contraseñas no son iguales");
-                }
+                return false;
             }
             temp = temp.getSiguiente();
         }
+        if (pass.equals(pass2)) {
+            Jugador j = new Jugador(user, pass);
+            filemanager.insertar(j);
+        }else{
+            JOptionPane.showMessageDialog(null, "Las contraseñas no son iguales");
+        }
+        return true;
     }
 
 }

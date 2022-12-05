@@ -32,7 +32,6 @@ public class WriterManager {
             }
             temp = e;
         }
-        System.out.println("ok");
     }
 
     public void close() throws IOException {

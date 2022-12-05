@@ -23,15 +23,22 @@ public class Dao {
         return true;
     }
 
-    public void cargarDatosPrueba() { // se agregan datos de prueba
+    public void cargarDatosPrueba() throws IOException { // se agregan datos de prueba
         try {
             reader.open(FILE_NAME);
             reader.readAll();
             reader.close(); //importante cerrar el archivo
             System.out.println("Lectura exitosa");
         } catch (IOException ex) {
-            System.err.println("error de archivo");
-            System.err.println(ex.getMessage());
+            try {
+                writer.open(FILE_NAME);
+                writer.writeAll();
+                writer.close();
+                System.out.println("Archivo creado");
+            } catch (IOException exe) {
+                System.err.println("error de archivo");
+                System.err.println(ex.getMessage());
+            }
         }
     }
 

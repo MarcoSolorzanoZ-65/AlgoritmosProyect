@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="bugs del juego">
+    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="auth, escritura, lectura y otras cosas.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaJugadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaJugadores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_Players/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_Players/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_Players/WriterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_Players/WriterManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Auth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" afterDir="false" />
     </list>
     <list id="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" name="Changes by Joshua" comment="">
@@ -33,32 +30,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaJugadores.java">
-      <ranges>
-        <range start1="11" end1="11" start2="11" end2="15" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="45" end1="47" start2="49" end2="50" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="71" end1="72" start2="74" end2="79" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="73" end1="85" start2="80" end2="90" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="86" end1="86" start2="91" end2="92" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="87" end1="87" start2="93" end2="94" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="88" end1="88" start2="95" end2="96" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java">
-      <ranges>
-        <range start1="20" end1="21" start2="20" end2="21" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="25" end1="26" start2="25" end2="26" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="27" end1="28" start2="27" end2="28" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="30" end1="78" start2="30" end2="118" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="79" end1="80" start2="119" end2="121" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
-        <range start1="97" end1="99" start2="138" end2="141" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="101" end1="102" start2="143" end2="143" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="103" end1="103" start2="144" end2="145" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-        <range start1="107" end1="112" start2="149" end2="173" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670178203023</updated>
       <workItem from="1670178205020" duration="232000" />
-      <workItem from="1670178668892" duration="23865000" />
+      <workItem from="1670178668892" duration="25257000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1670179504375</created>
@@ -132,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670272083427</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="auth, escritura, lectura y otras cosas.">
+      <created>1670279514075</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670279514075</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +145,8 @@
     <MESSAGE value="checks" />
     <MESSAGE value="Read And Write and a bit auth" />
     <MESSAGE value="bugs del juego" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugs del juego" />
+    <MESSAGE value="auth, escritura, lectura y otras cosas." />
+    <option name="LAST_COMMIT_MESSAGE" value="auth, escritura, lectura y otras cosas." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
