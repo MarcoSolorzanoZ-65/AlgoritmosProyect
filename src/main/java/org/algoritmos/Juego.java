@@ -8,7 +8,11 @@ import javax.swing.*;
  **/
 
 public class Juego {
-    ListaJugadores lj = new ListaJugadores();
+    ListaJugadores lj;
+
+    public Juego(ListaJugadores lj) {
+        this.lj = lj;
+    }
 
     public void botCreate(int botAmount) {
         for (int i = 0; i < botAmount; i++) {
@@ -53,7 +57,11 @@ public class Juego {
                     } else {
                         jugador.setPosicion(jugador.getPosicion() + (dice1 + dice2));
                         checkPos(jugador, jugador.getPosicion());
-                        jugador.setScore(jugador.getScore() + (dice1 + dice2));
+                        checkLaps(jugador);
+                        jugador.setScore(jugador.getScore() + (sumDice));
+                        JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nRonda actual: "
+                                + jugador.getLaps() + "\nPosicion: "
+                                + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
                     }
 
                     ListaJugadores ljScores = new ListaJugadores();
@@ -66,6 +74,17 @@ public class Juego {
                     JOptionPane.showMessageDialog(null, ScorePlayers);
                 }
             }
+        }
+    }
+
+    public void checkLaps(Jugador jugador) {
+        if (jugador.getPosicion() == 28) {
+            jugador.setPosicion(0);
+            jugador.setLaps(jugador.getLaps() + 1);
+        } else if (jugador.getPosicion() > 28) {
+            int posicionesSobrantes = jugador.getPosicion() - 28;
+            jugador.setPosicion(posicionesSobrantes);
+            jugador.setLaps(jugador.getLaps() + 1);
         }
     }
 
