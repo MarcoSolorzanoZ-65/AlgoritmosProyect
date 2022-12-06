@@ -16,6 +16,7 @@ public class DaoH {
         this.lista = lista;
         this.writer = new WriterManagerH(lista);
         this.reader = new ReaderManagerH(lista);
+        FILE_NAME = jugador.getUsuario() + ".txt";
     }
 
     public boolean insertar(Jugador p) {

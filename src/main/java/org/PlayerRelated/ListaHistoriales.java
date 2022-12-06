@@ -81,6 +81,22 @@ public class ListaHistoriales {
         }
     }
 
+    public String imprimir() {
+        NodoH temp = this.cabeza;
+        String txt = "";
+        if (temp!= null) {
+            while (temp != null) {
+                long seed = temp.getDato().getNumeroJuego();
+                int score = temp.getDato().getPuntacionJuego();
+                txt += "Seed: " + seed + " Score: " + score + "\n";
+                temp = temp.getSiguiente();
+            }
+        }else{
+            return "No hay historial almacenado.";
+        }
+        return txt;
+    }
+
     public int size() {
         return cantidadNodos;
     }

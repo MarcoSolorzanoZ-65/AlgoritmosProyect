@@ -8,7 +8,7 @@ import javax.swing.*;
 public class
 Juego {
     ListaJugadores lj;
-
+    private int winnerScore;
     public Juego(ListaJugadores lj) {
         this.lj = lj;
     }
@@ -17,6 +17,10 @@ Juego {
         for (int i = 1; i < botAmount+1; i++) {
             lj.insertarFinal(new Jugador("Bot #" + i, ""));
         }
+    }
+
+    public int getWinnerScore() {
+        return winnerScore;
     }
 
     public void setLj(ListaJugadores lj) {
@@ -41,11 +45,7 @@ Juego {
                         int dice1 = dice();
                         int dice2 = dice();
                         int sumDice = sumDice(jugador, dice1, dice2);
-                        if (jugador.getScore() >= 84) {
-                            jugar = false;
-                            JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
-                            return true;
-                        }
+                        //Se le despliega al jugador cuanto dieron ambos dados.
                         JOptionPane.showMessageDialog(null, "Jugador: " + jugador.getUsuario()
                                 + "\nDado 1: " + dice1 + "\nDado 2: " + dice2
                                 + "\nTotal: " + sumDice);

@@ -2,11 +2,12 @@ package org.algoritmos;
 
 import org.PlayerRelated.Jugador;
 import org.PlayerRelated.ListaJugadores;
+import org.ReadAndWrite_History.DaoH;
 import org.ReadAndWrite_Players.Dao;
 import org.apache.commons.codec.digest.DigestUtils;
-
 import javax.swing.*;
 import java.io.IOException;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -42,6 +43,10 @@ public class Main {
                             switch (op) {
                                 case 1 -> {
                                     int cantBots = 0;
+                                    Random randomobj = new Random();
+                                    DaoH daoH = new DaoH(player.getHistorial(), player);
+                                    long seed = new Random().nextLong();
+                                    randomobj.setSeed(seed);
                                     try {
                                         cantBots = Integer.parseInt(JOptionPane.showInputDialog("Ingrese contra cuantos bots desea jugar (maximo 3)."));
                                     } catch (NumberFormatException e) {
@@ -52,6 +57,14 @@ public class Main {
                                         gameList.insertarFinal(player);
                                         juego.botCreate(cantBots);
                                         juego.game();
+                                        if (daoH.getLista().getCabeza() != null) {
+                                            System.out.println("La lista ya esta cargada.");
+                                        }else{
+                                            daoH.cargarDatosPrueba();
+                                        }
+                                        daoH.getLista().ordenar(daoH.getLista().getCabeza());
+                                        int finalseed = randomobj.nextInt();
+                                        daoH.insertar(new Historial(finalseed, juego.getWinnerScore()));
                                         juego.setLj(new ListaJugadores());
                                         player.setScore(0);
                                         player.setPosicion(0);
@@ -72,7 +85,14 @@ public class Main {
                                     }
                                 }
                                 case 3 -> {
-
+                                    DaoH daoH = new DaoH(player.getHistorial(), player);
+                                    if (daoH.getLista().getCabeza() != null) {
+                                        System.out.println("La lista ya esta cargada.");
+                                    }else{
+                                        daoH.cargarDatosPrueba();
+                                    }
+                                    daoH.getLista().ordenar(daoH.getLista().getCabeza());
+                                    JOptionPane.showMessageDialog(null, player.getHistorial().imprimir());
                                 }
                                 case 4 -> {
                                     salir = true;

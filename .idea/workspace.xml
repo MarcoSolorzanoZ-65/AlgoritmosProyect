@@ -4,12 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="espacio">
+    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="auth modifications">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Historial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Historial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaHistoriales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaHistoriales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_History/DaoH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_History/DaoH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios.txt" beforeDir="false" afterPath="$PROJECT_DIR$/usuarios.txt" afterDir="false" />
+    </list>
+    <list id="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" name="Changes by Joshua" comment="espacio by joshua mas estupido del mundo">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Historial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Historial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaHistoriales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaHistoriales.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaJugadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaJugadores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Nodo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Nodo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/NodoH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/NodoH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_History/DaoH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_History/DaoH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_History/ReaderManagerH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_History/ReaderManagerH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_History/WriterManagerH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_History/WriterManagerH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" afterDir="false" />
     </list>
-    <list id="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" name="Changes by Joshua" comment="espacio by joshua mas estupido del mundo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +41,87 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java">
+      <ranges>
+        <range start1="7" end1="9" start2="7" end2="9" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="10" end1="11" start2="10" end2="11" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="15" end1="15" start2="15" end2="16" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="20" end1="20" start2="21" end2="25" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="29" end1="29" start2="34" end2="35" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="30" end1="30" start2="36" end2="37" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="32" end1="32" start2="39" end2="40" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="34" end1="34" start2="42" end2="46" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="35" end1="35" start2="47" end2="48" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="39" end1="39" start2="52" end2="53" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="40" end1="40" start2="54" end2="55" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="42" end1="42" start2="57" end2="58" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="43" end1="48" start2="59" end2="60" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="51" end1="54" start2="63" end2="63" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="63" end1="63" start2="72" end2="77" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="81" end1="81" start2="95" end2="100" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="87" end1="87" start2="106" end2="111" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="96" end1="96" start2="120" end2="125" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="98" end1="98" start2="127" end2="128" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="140" end1="140" start2="170" end2="171" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="3" end1="3" start2="4" end2="5" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="4" end1="4" start2="6" end2="7" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="6" end1="7" start2="9" end2="9" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="9" end1="9" start2="11" end2="12" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="17" end1="17" start2="20" end2="21" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="44" end1="44" start2="48" end2="52" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="54" end1="54" start2="62" end2="70" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="70" end1="71" start2="86" end2="87" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="74" end1="75" start2="90" end2="98" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Historial.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="3" end1="4" start2="4" end2="6" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="5" end1="6" start2="7" end2="12" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="9" end1="10" start2="15" end2="16" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="23" end1="24" start2="29" end2="30" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/PlayerRelated/Jugador.java">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="5" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="10" end1="10" start2="12" end2="13" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="16" end1="16" start2="19" end2="20" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="25" end1="25" start2="29" end2="33" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="68" end1="69" start2="76" end2="77" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaHistoriales.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="82" end1="82" start2="83" end2="99" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/main/java/org/ReadAndWrite_History/DaoH.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="3" end1="3" start2="4" end2="5" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="9" end1="10" start2="11" end2="12" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="12" end1="13" start2="14" end2="15" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="14" end1="15" start2="16" end2="17" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="18" end1="18" start2="20" end2="21" changelist="1883049a-b435-4787-9930-7a76f3ab8e19" />
+        <range start1="20" end1="22" start2="23" end2="25" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="31" end1="32" start2="34" end2="35" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="37" end1="38" start2="40" end2="41" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="39" end1="40" start2="42" end2="43" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="50" end1="51" start2="53" end2="54" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="52" end1="53" start2="55" end2="56" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+        <range start1="57" end1="66" start2="60" end2="61" changelist="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -52,6 +150,26 @@
       <recent name="C:\Users\marco\IdeaProjects\AlgoritmosProyect\src\main\java\org\algoritmos" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.algoritmos.Main" />
+      <module name="AlgoritmosProyect" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.algoritmos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,7 +180,7 @@
       <updated>1670178203023</updated>
       <workItem from="1670178205020" duration="232000" />
       <workItem from="1670178668892" duration="35045000" />
-      <workItem from="1670346784162" duration="293000" />
+      <workItem from="1670346784162" duration="7901000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1670179504375</created>
@@ -141,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670290484067</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="auth modifications">
+      <created>1670347098659</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670347098659</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,17 +306,7 @@
     <MESSAGE value="todo menos historial" />
     <MESSAGE value="Changes by Joshua" />
     <MESSAGE value="espacio by joshua mas estupido del mundo" />
-    <option name="LAST_COMMIT_MESSAGE" value="espacio by joshua mas estupido del mundo" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="auth modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth modifications" />
   </component>
 </project>

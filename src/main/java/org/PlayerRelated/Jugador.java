@@ -14,6 +14,7 @@ public class Jugador {
         this.password = password;
         posicion = 0;
         turno = true;
+        this.historial = new ListaHistoriales();
     }
 
     public String getUsuario() {

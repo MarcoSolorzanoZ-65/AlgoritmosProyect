@@ -1,9 +1,14 @@
 package org.PlayerRelated;
 
 public class Historial {
-    private int numeroJuego, puntacionJuego;
+    private long numeroJuego;
+    private int puntacionJuego;
 
-    public int getNumeroJuego() {
+    public Historial(int numeroJuego, int puntacionJuego){
+        this.numeroJuego = numeroJuego;
+        this.puntacionJuego = puntacionJuego;
+    }
+    public long getNumeroJuego() {
         return numeroJuego;
     }
 
@@ -21,6 +26,6 @@ public class Historial {
 
     @Override
     public String toString() {
-        return numeroJuego + "-" + puntacionJuego;
+        return numeroJuego + "_" + puntacionJuego;
     }
 }
