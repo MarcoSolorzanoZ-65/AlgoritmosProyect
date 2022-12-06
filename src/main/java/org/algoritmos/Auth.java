@@ -8,11 +8,6 @@ import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.swing.*;
 
-/**
- * @author : marco
- * @created : 12/5/2022, Monday
- **/
-
 public class Auth {
     ListaJugadores lj;
     Dao filemanager;

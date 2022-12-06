@@ -5,12 +5,8 @@ import org.PlayerRelated.ListaJugadores;
 
 import javax.swing.*;
 
-/**
- * @author : marco
- * @created : 12/4/2022, Sunday
- **/
-
-public class Juego {
+public class
+Juego {
     ListaJugadores lj;
 
     public Juego(ListaJugadores lj) {
@@ -18,7 +14,7 @@ public class Juego {
     }
 
     public void botCreate(int botAmount) {
-        for (int i = 0; i < botAmount; i++) {
+        for (int i = 1; i < botAmount+1; i++) {
             lj.insertarFinal(new Jugador("Bot #" + i, ""));
         }
     }
@@ -33,7 +29,7 @@ public class Juego {
 
     public boolean game() {
         boolean jugar = true;
-        while (jugar) {
+        do {
             for (int i = 0; i < lj.size(); i++) {
                 Jugador jugador = lj.buscarJugador(i);
                 if (jugador.isTurno()) {
@@ -139,21 +135,41 @@ public class Juego {
         return (int) ((Math.random() * (7 - 1)) + 1);
     }
 
-    private void sumDice(Jugador j, int dice1, int dice2) {
-        if ((dice1 + dice2) == 6) {
+    private int sumDice(Jugador j, int dice1, int dice2) {
+        int total = dice1 + dice2;
+        if ((total) == 6) {
             j.setPosicion(j.getPosicion() - 1);
             j.setScore(j.getScore() - 1);
-            JOptionPane.showMessageDialog(null, "Ambos dados suman 6, retrocede 1 posicion.");
         }
+        return total;
     }
 
     public void checkPos(Jugador player, int pos) {
         switch (pos) {
-            case 3 -> player.setPosicion(player.getPosicion() - 2);
-            case 8 -> player.setPosicion(0);
-            case 14 -> player.setPosicion(player.getPosicion() - 5);
-            case 22 -> player.setTurno(false);
-            case 25 -> player.setPosicion(player.getPosicion() + 3);
+            case 3 -> {
+                player.setPosicion(player.getPosicion() - 2);
+                player.setScore(player.getScore() - 2);
+                JOptionPane.showMessageDialog(null, "Posicion 3: Retrocede 2 posiciones.");
+            }
+            case 8 -> {
+                player.setPosicion(0);
+                player.setScore(player.getScore() - 8);
+                JOptionPane.showMessageDialog(null, "Posicion 8: Se devuelve al inicio del tablero.");
+            }
+            case 14 -> {
+                player.setPosicion(player.getPosicion() - 5);
+                player.setScore(player.getScore() - 5);
+                JOptionPane.showMessageDialog(null, "Posicion 14: Retrocede 5 posiciones.");
+            }
+            case 22 -> {
+                player.setTurno(false);
+                JOptionPane.showMessageDialog(null, "Posicion 22: Pierde el siguiente turno.");
+            }
+            case 25 -> {
+                player.setPosicion(player.getPosicion() + 3);
+                player.setScore(player.getScore() + 3);
+                JOptionPane.showMessageDialog(null, "Posicion 25: Avanza 3 posiciones.");
+            }
         }
     }
 }

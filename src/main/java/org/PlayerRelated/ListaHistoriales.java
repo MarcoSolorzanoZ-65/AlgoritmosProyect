@@ -2,15 +2,14 @@ package org.PlayerRelated;
 
 import javax.swing.*;
 
-public class ListaJugadores {
-
-    private Nodo cabeza, cola;
+public class ListaHistoriales {
+    private NodoH cabeza, cola;
     private int cantidadNodos;
 
-    public ListaJugadores() {
+    public ListaHistoriales() {
     }
 
-    public Nodo getCabeza() {
+    public NodoH getCabeza() {
         return cabeza;
     }
 
@@ -18,8 +17,8 @@ public class ListaJugadores {
         return cabeza == null;
     }
 
-    public void insertarInicio(Jugador jugador) {
-        Nodo nuevo = new Nodo(jugador);
+    public void insertarInicio(Historial historial) {
+        NodoH nuevo = new NodoH(historial);
         if (cabeza == null) {
             cabeza = cola = nuevo;
         } else {
@@ -30,8 +29,8 @@ public class ListaJugadores {
         cantidadNodos++;
     }
 
-    public void insertarFinal(Jugador jugador) {
-        Nodo nuevo = new Nodo(jugador);
+    public void insertarFinal(Historial historial) {
+        NodoH nuevo = new NodoH(historial);
         if (cabeza == null) {
             cabeza = cola = nuevo;
         } else {
@@ -42,9 +41,9 @@ public class ListaJugadores {
         cantidadNodos++;
     }
 
-    public Jugador buscarJugador(int posicion) {
+    public Historial buscarHistorial(int posicion) {
         if (!estaVacia()) {
-            Nodo temp = cabeza;
+            NodoH temp = cabeza;
             int pos = 0;
             while (temp != null) {
                 if (posicion == pos) {
@@ -54,39 +53,22 @@ public class ListaJugadores {
                 pos++;
             }
         } else {
-            JOptionPane.showMessageDialog(null, "El jugador solicitado no existe");
+            JOptionPane.showMessageDialog(null, "El historial solicitado no existe");
         }
         return null;
     }
 
-    public Jugador edit(String user, String pass, String newPass) {
-        Nodo temp = cabeza;
-        boolean salir = true;
-        while (temp != null && salir == true) {
-            if (temp.getDato().getUsuario().equals(user) && temp.getDato().getPassword().equals(pass)) {
-                temp.getDato().setPassword(newPass);
-                return temp.getDato();
-            }else{
-                JOptionPane.showMessageDialog(null, "Contraseña invalida!");
-                salir = false;
-            }
-            temp = temp.getSiguiente();
-        }
-        return null;
-    }
-
-    public void ordenar(Nodo start)
-    {
+    public void ordenar(NodoH start) {
         int swapped, i;
-        Nodo ptr1;
-        Nodo lptr = null;
+        NodoH ptr1;
+        NodoH lptr = null;
         if (!estaVacia()) {
             do {
                 swapped = 0;
                 ptr1 = start;
                 while (ptr1.getSiguiente() != lptr) {
-                    if (ptr1.getDato().getScore() < ptr1.getSiguiente().getDato().getScore()) {
-                        Jugador t = ptr1.getDato();
+                    if (ptr1.getDato().getPuntacionJuego() < ptr1.getSiguiente().getDato().getPuntacionJuego()) {
+                        Historial t = ptr1.getDato();
                         ptr1.setDato(ptr1.getSiguiente().getDato());
                         ptr1.getSiguiente().setDato(t);
                         swapped = 1;
@@ -103,3 +85,4 @@ public class ListaJugadores {
         return cantidadNodos;
     }
 }
+
