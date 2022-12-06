@@ -67,7 +67,7 @@ public class ListaJugadores {
                 temp.getDato().setPassword(newPass);
                 return temp.getDato();
             }else{
-                JOptionPane.showMessageDialog(null, "Contraseña invalida!");
+                JOptionPane.showMessageDialog(null, "Contraseña antigua invalida!");
                 salir = false;
             }
             temp = temp.getSiguiente();

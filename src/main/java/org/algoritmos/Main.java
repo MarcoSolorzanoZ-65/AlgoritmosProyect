@@ -61,8 +61,15 @@ public class Main {
                                     }
                                 }
                                 case 2 -> {
-                                    dao.editar(player.getUsuario(), DigestUtils.md5Hex(JOptionPane.showInputDialog("Ingrese su vieja contraseña.")),
-                                            DigestUtils.md5Hex(JOptionPane.showInputDialog("Ingrese su nueva contraseña.")));
+                                    String contraNueva = DigestUtils.md5Hex(JOptionPane.showInputDialog("Ingrese su nueva contraseña."));
+                                    String contraConfirm = DigestUtils.md5Hex(JOptionPane.showInputDialog("Confirme su nueva contraseña."));
+
+                                    if (contraConfirm.equals(contraNueva)) {
+                                        dao.editar(player.getUsuario(), DigestUtils.md5Hex(JOptionPane.showInputDialog("Ingrese su vieja contraseña.")),
+                                                contraConfirm);
+                                    }else{
+                                        JOptionPane.showMessageDialog(null, "La contraseña nueva no coincide");
+                                    }
                                 }
                                 case 3 -> {
 

@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="todo menos historial" />
-    <list id="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" name="Changes by Joshua" comment="">
+    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="espacio">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaJugadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/PlayerRelated/ListaJugadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Auth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/ListaJugadores.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" afterDir="false" />
     </list>
+    <list id="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" name="Changes by Joshua" comment="espacio by joshua mas estupido del mundo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,17 +34,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/marco/IdeaProjects/AlgoritmosProyect/src/main/java/org/ReadAndWrite_History",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marco/IdeaProjects/AlgoritmosProyect/src/main/java/org/ReadAndWrite_History&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\marco\IdeaProjects\AlgoritmosProyect\src\main\java\org\ReadAndWrite_History" />
@@ -62,7 +61,8 @@
       <option name="presentableId" value="Default" />
       <updated>1670178203023</updated>
       <workItem from="1670178205020" duration="232000" />
-      <workItem from="1670178668892" duration="33977000" />
+      <workItem from="1670178668892" duration="35045000" />
+      <workItem from="1670346784162" duration="293000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1670179504375</created>
@@ -120,7 +120,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670289568940</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="todo menos historial">
+      <created>1670290100717</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670290100717</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes by Joshua">
+      <created>1670290115249</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670290115249</updated>
+    </task>
+    <task id="LOCAL-00011" summary="espacio by joshua mas estupido del mundo">
+      <created>1670290484067</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670290484067</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +179,9 @@
     <MESSAGE value="auth, escritura, lectura y otras cosas." />
     <MESSAGE value="arreglos en el auth" />
     <MESSAGE value="todo menos historial" />
-    <option name="LAST_COMMIT_MESSAGE" value="todo menos historial" />
+    <MESSAGE value="Changes by Joshua" />
+    <MESSAGE value="espacio by joshua mas estupido del mundo" />
+    <option name="LAST_COMMIT_MESSAGE" value="espacio by joshua mas estupido del mundo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
