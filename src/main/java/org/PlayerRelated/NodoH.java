@@ -1,5 +1,6 @@
 package org.PlayerRelated;
 
+//Clase nodo aprendida en clase usada en la lista de los historiales.
 public class NodoH {
     private Historial dato;
     private NodoH anterior, siguiente;

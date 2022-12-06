@@ -1,6 +1,8 @@
 package org.PlayerRelated;
 
-//Clase jugador
+//Clase jugador donde se almacenan todos los atributos necesarios para el funcionamiento del sistema de inicio de sesion,
+//del juego y del historial.
+
 public class Jugador {
     private String usuario;
     private String password;
@@ -8,6 +10,7 @@ public class Jugador {
     private boolean turno;
     private int score;
     private int laps;
+    private ListaHistoriales historial;
 
     public Jugador(String usuario, String password) {
         this.usuario = usuario;
@@ -23,6 +26,10 @@ public class Jugador {
 
     public void setUsuario(String usuario) {
         this.usuario = usuario;
+    }
+
+    public ListaHistoriales getHistorial(){
+        return historial;
     }
 
     public String getPassword() {
@@ -67,6 +74,6 @@ public class Jugador {
 
     @Override
     public String toString() {
-        return usuario+"-"+password;
+        return usuario + "-" + password;
     }
 }

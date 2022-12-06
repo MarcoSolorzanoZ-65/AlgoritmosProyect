@@ -1,6 +1,8 @@
 package org.algoritmos;
 
+import org.PlayerRelated.Historial;
 import org.PlayerRelated.Jugador;
+import org.PlayerRelated.ListaHistoriales;
 import org.PlayerRelated.ListaJugadores;
 import org.ReadAndWrite_History.DaoH;
 import org.ReadAndWrite_Players.Dao;
@@ -16,6 +18,7 @@ public class Main {
         Dao dao = new Dao(users);
         Auth auth = new Auth(users, dao);
         Juego juego = new Juego(gameList);
+        ListaHistoriales histList = new ListaHistoriales();
 
         dao.cargarDatosPrueba();
 
@@ -81,7 +84,7 @@ public class Main {
                                         dao.editar(player.getUsuario(), DigestUtils.md5Hex(JOptionPane.showInputDialog("Ingrese su vieja contraseña.")),
                                                 contraConfirm);
                                     }else{
-                                        JOptionPane.showMessageDialog(null, "La contraseña nueva no coincide");
+                                        JOptionPane.showMessageDialog(null, "La contraseña nueva no coincide.");
                                     }
                                 }
                                 case 3 -> {

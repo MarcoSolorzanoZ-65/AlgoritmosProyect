@@ -2,6 +2,7 @@ package org.PlayerRelated;
 
 import javax.swing.*;
 
+//Clase para almacenar los diferentes historiales del jugador en la lista enlazada doble aprendida en clase.
 public class ListaHistoriales {
     private NodoH cabeza, cola;
     private int cantidadNodos;

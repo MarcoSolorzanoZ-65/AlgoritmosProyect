@@ -1,5 +1,6 @@
 package org.PlayerRelated;
 
+//Clase para almacenar tanto el numero de juego como la puntuacion respectiva que tuvo el jugador.
 public class Historial {
     private long numeroJuego;
     private int puntacionJuego;
@@ -12,7 +13,7 @@ public class Historial {
         return numeroJuego;
     }
 
-    public void setNumeroJuego(int numeroJuego) {
+    public void setNumeroJuego(long numeroJuego) {
         this.numeroJuego = numeroJuego;
     }
 

@@ -1,6 +1,6 @@
 package org.PlayerRelated;
 
-//Clase Nodo aprendida en clases
+//Clase nodo aprendida en clase usada en la lista de los jugadores.
 public class Nodo {
     private Jugador dato;
     private Nodo anterior, siguiente;

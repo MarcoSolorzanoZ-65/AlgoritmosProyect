@@ -1,6 +1,8 @@
 package org.ReadAndWrite_History;
 
+import org.PlayerRelated.Historial;
 import org.PlayerRelated.Jugador;
+import org.PlayerRelated.ListaHistoriales;
 import org.PlayerRelated.ListaJugadores;
 
 import java.io.BufferedReader;
@@ -11,9 +13,9 @@ import java.io.IOException;
 public class ReaderManagerH {
 
     private BufferedReader reader;
-    ListaJugadores lista;
+    ListaHistoriales lista;
 
-    public ReaderManagerH(ListaJugadores lista) {
+    public ReaderManagerH(ListaHistoriales lista) {
         this.lista = lista;
     }
 
@@ -21,24 +23,28 @@ public class ReaderManagerH {
         reader = new BufferedReader(new FileReader(fileName));
     }
 
-    public Jugador read() throws IOException {
-        Jugador p = null;
-        String line = reader.readLine(); //retorna null cuando no hay más registros
+    public Historial read() throws IOException {
+        Historial h = null;
+        String line = null; //retorna null cuando no hay más registros
+        try {
+            line = reader.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         String[] datos;
         if (line != null) {
-            p = new Jugador("", "");
-            datos = line.split("-"); // separa el String en un array
-            p.setUsuario(datos[0]);
-            p.setPassword(datos[1]);
-
+            h = new Historial(0,0);
+            datos = line.split("_"); // separa el String en un array
+            h.setNumeroJuego(Long.parseLong(datos[0]));
+            h.setPuntacionJuego(Integer.parseInt(datos[1]));
         }
-        return p;
+        return h;
     }
 
     public void readAll() throws IOException {
-        Jugador p;
-        while ((p = read()) != null) {
-            lista.insertarInicio(p);
+        Historial h;
+        while ((h = read()) != null) {
+            lista.insertarFinal(h);
         }
     }
 

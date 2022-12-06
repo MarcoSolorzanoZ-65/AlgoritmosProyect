@@ -2,6 +2,7 @@ package org.PlayerRelated;
 
 import javax.swing.*;
 
+//Clase para almacenar tanto a los jugadores como a los bot en la lista enlazada doble aprendida en clase.
 public class ListaJugadores {
 
     private Nodo cabeza, cola;

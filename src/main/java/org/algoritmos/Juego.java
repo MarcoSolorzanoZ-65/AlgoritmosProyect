@@ -5,14 +5,15 @@ import org.PlayerRelated.ListaJugadores;
 
 import javax.swing.*;
 
-public class
-Juego {
+//Clase juego donde se almacena la logica interna del juego.
+public class Juego {
     ListaJugadores lj;
     private int winnerScore;
     public Juego(ListaJugadores lj) {
         this.lj = lj;
     }
 
+    //Metodo para agregar a la lista de jugadores los bots que indique el usuario.
     public void botCreate(int botAmount) {
         for (int i = 1; i < botAmount+1; i++) {
             lj.insertarFinal(new Jugador("Bot #" + i, ""));
@@ -31,27 +32,35 @@ Juego {
         return lj;
     }
 
+    //The game.
     public boolean game() {
+        //Variable utilizada para terminar el loop del juego.
         boolean jugar = true;
         do {
+            //for para ir recorriendo la lista de jugadores para saber el turno de cada uno.
             for (int i = 0; i < lj.size(); i++) {
                 Jugador jugador = lj.buscarJugador(i);
+                if (!jugador.getUsuario().equals("Bot #" + i)) {
+                    winnerScore = jugador.getScore();
+                }
+                //Aqui verificamos si en el turno anterior el jugador no quedo en la casilla 22 por lo que perderia el turno.
                 if (jugador.isTurno()) {
+                    //Para verificar si alguien gano el juego.
                     if (jugador.getScore() >= 84) {
                         jugar = false;
                         JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
                         return true;
+                        //Si nadie ha ganado se continua con el juego.
                     } else {
+                        //Se declaran los valores de los dados en la ronda.
                         int dice1 = dice();
                         int dice2 = dice();
+                        //Se suman ambos para saber cuantas casillas procede a avanzar.
                         int sumDice = sumDice(jugador, dice1, dice2);
                         //Se le despliega al jugador cuanto dieron ambos dados.
                         JOptionPane.showMessageDialog(null, "Jugador: " + jugador.getUsuario()
                                 + "\nDado 1: " + dice1 + "\nDado 2: " + dice2
                                 + "\nTotal: " + sumDice);
-                        if (sumDice == 6){
-                            JOptionPane.showMessageDialog(null, "Ambos dados suman 6, retrocede 1 posicion.");
-                        }
                         if (dice1 == 6 && dice2 == 6) {
                             JOptionPane.showMessageDialog(null, "Felicidades, ambos dados son un 6, repite turno!");
                             boolean dobles = true;
@@ -61,6 +70,11 @@ Juego {
                                     + jugador.getUsuario() + "\nRonda actual: "
                                     + jugador.getLaps() + "\nPosicion: "
                                     + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
+                            if (jugador.getScore() >= 84) {
+                                jugar = false;
+                                JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                                return true;
+                            }
                             while (dobles && doubleCount != 2) {
                                 int goldenDice1 = dice();
                                 int goldenDice2 = dice();
@@ -79,12 +93,22 @@ Juego {
                                             + jugador.getLaps() + "\nPosicion: "
                                             + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
                                     doubleCount++;
+                                    if (jugador.getScore() >= 84) {
+                                        jugar = false;
+                                        JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                                        return true;
+                                    }
                                 } else {
                                     updatePlayer(jugador, sumGDice);
                                     JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nJugador: "
                                             + jugador.getUsuario() + "\nRonda actual: "
                                             + jugador.getLaps() + "\nPosicion: "
                                             + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
+                                    if (jugador.getScore() >= 84) {
+                                        jugar = false;
+                                        JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                                        return true;
+                                    }
                                     dobles = false;
                                 }
                             }
@@ -94,8 +118,14 @@ Juego {
                                     + jugador.getUsuario() + "\nRonda actual: "
                                     + jugador.getLaps() + "\nPosicion: "
                                     + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
+                            if (jugador.getScore() >= 84) {
+                                jugar = false;
+                                JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                                return true;
+                            }
                         }
                     }
+                    //Else en caso de que el jugador hubiera perdido el turno.
                 } else {
                     jugador.setTurno(true);
                     JOptionPane.showMessageDialog(null, "El jugador " + jugador.getUsuario() + " perdio el turno la ronda pasada.");
@@ -138,6 +168,7 @@ Juego {
     private int sumDice(Jugador j, int dice1, int dice2) {
         int total = dice1 + dice2;
         if ((total) == 6) {
+            JOptionPane.showMessageDialog(null, "Ambos dados suman 6, retrocede 1 posicion.");
             j.setPosicion(j.getPosicion() - 1);
             j.setScore(j.getScore() - 1);
         }

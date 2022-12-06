@@ -1,6 +1,8 @@
 package org.ReadAndWrite_History;
 
+import org.PlayerRelated.Historial;
 import org.PlayerRelated.Jugador;
+import org.PlayerRelated.ListaHistoriales;
 import org.PlayerRelated.ListaJugadores;
 
 import java.io.BufferedWriter;
@@ -10,9 +12,9 @@ import java.io.IOException;
 public class WriterManagerH {
 
     private BufferedWriter writer;
-    ListaJugadores lista;
+    ListaHistoriales lista;
 
-    public WriterManagerH(ListaJugadores lista) {
+    public WriterManagerH(ListaHistoriales lista) {
         this.lista = lista;
     }
 
@@ -20,14 +22,14 @@ public class WriterManagerH {
         writer = new BufferedWriter(new FileWriter(fileName));
     }
 
-    public void write(Jugador p) throws IOException {
-        writer.write(p.toString() + "\n");
+    public void write(Historial h) throws IOException {
+        writer.write(h.toString() + "\n");
     }
 
     public void writeAll() throws IOException {
         for (int i = 0; i < lista.size(); i++) {
-            Jugador e = lista.buscarJugador(i);
-            Jugador temp = null;
+            Historial e = lista.buscarHistorial(i);
+            Historial temp = null;
             if (e != null && e != temp) {
                 write(e);
             }

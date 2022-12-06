@@ -1,26 +1,28 @@
 package org.ReadAndWrite_History;
 
+import org.PlayerRelated.Historial;
 import org.PlayerRelated.Jugador;
+import org.PlayerRelated.ListaHistoriales;
 import org.PlayerRelated.ListaJugadores;
 
 import java.io.IOException;
 
 public class DaoH {
 
-    ListaJugadores lista;
+    ListaHistoriales lista;
     WriterManagerH writer;
     ReaderManagerH reader;
-    public static final String FILE_NAME = "usuarios.txt";
+    public static String FILE_NAME;
 
-    public DaoH(ListaJugadores lista) {
+    public DaoH(ListaHistoriales lista, Jugador jugador) {
         this.lista = lista;
         this.writer = new WriterManagerH(lista);
         this.reader = new ReaderManagerH(lista);
         FILE_NAME = jugador.getUsuario() + ".txt";
     }
 
-    public boolean insertar(Jugador p) {
-        lista.insertarInicio(p);
+    public boolean insertar(Historial h) {
+        lista.insertarInicio(h);
         guardarLista();
         return true;
     }
@@ -30,15 +32,15 @@ public class DaoH {
             reader.open(FILE_NAME);
             reader.readAll();
             reader.close(); //importante cerrar el archivo
-            System.out.println("Lectura exitosa");
+            System.out.println("Lectura exitosa.");
         } catch (IOException ex) {
             try {
                 writer.open(FILE_NAME);
                 writer.writeAll();
                 writer.close();
-                System.out.println("Archivo creado");
+                System.out.println("Archivo creado.");
             } catch (IOException exe) {
-                System.err.println("error de archivo");
+                System.err.println("Error de archivo.");
                 System.err.println(ex.getMessage());
             }
         }
@@ -49,22 +51,14 @@ public class DaoH {
             writer.open(FILE_NAME);
             writer.writeAll();
             writer.close();
-            System.out.println("Escritura exitosa");
+            System.out.println("Escritura exitosa.");
         } catch (IOException ex) {
-            System.err.println("error de archivo");
+            System.err.println("Error de archivo.");
             System.err.println(ex.getMessage());
         }
     }
 
-    public boolean editar(String user, String pass, String newPass){
-        Jugador s = lista.edit(user, pass, newPass);
-        if (s != null) {
-            guardarLista();
-        }
-        return true;
-    }
-
-    public ListaJugadores getLista() {
+    public ListaHistoriales getLista() {
         return lista;
     }
 }
