@@ -1,20 +1,21 @@
-package org.ReadAndWrite_Players;
+package org.ReadAndWrite_History;
 
-import java.io.IOException;
 import org.PlayerRelated.Jugador;
 import org.PlayerRelated.ListaJugadores;
 
-public class Dao {
+import java.io.IOException;
+
+public class DaoH {
 
     ListaJugadores lista;
-    WriterManager writer;
-    ReaderManager reader;
+    WriterManagerH writer;
+    ReaderManagerH reader;
     public static final String FILE_NAME = "usuarios.txt";
 
-    public Dao(ListaJugadores lista) {
+    public DaoH(ListaJugadores lista) {
         this.lista = lista;
-        this.writer = new WriterManager(lista);
-        this.reader = new ReaderManager(lista);
+        this.writer = new WriterManagerH(lista);
+        this.reader = new ReaderManagerH(lista);
     }
 
     public boolean insertar(Jugador p) {

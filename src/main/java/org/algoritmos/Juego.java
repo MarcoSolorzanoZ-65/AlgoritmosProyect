@@ -23,6 +23,14 @@ public class Juego {
         }
     }
 
+    public void setLj(ListaJugadores lj) {
+        this.lj = lj;
+    }
+
+    public ListaJugadores getLj() {
+        return lj;
+    }
+
     public boolean game() {
         boolean jugar = true;
         while (jugar) {
@@ -52,10 +60,7 @@ public class Juego {
                             JOptionPane.showMessageDialog(null, "Felicidades, ambos dados son un 6, repite turno!");
                             boolean dobles = true;
                             int doubleCount = 1;
-                            jugador.setPosicion(jugador.getPosicion() + (dice1 + dice2));
-                            checkPos(jugador, jugador.getPosicion());
-                            checkLaps(jugador);
-                            jugador.setScore(jugador.getScore() + (dice1 + dice2));
+                            updatePlayer(jugador, sumDice);
                             JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nJugador: "
                                     + jugador.getUsuario() + "\nRonda actual: "
                                     + jugador.getLaps() + "\nPosicion: "
@@ -72,20 +77,14 @@ public class Juego {
                                 }
                                 if (goldenDice1 == 6 && goldenDice2 == 6) {
                                     JOptionPane.showMessageDialog(null, "Felicidades, ambos dados son un 6, repite turno nuevamente!");
-                                    jugador.setPosicion(jugador.getPosicion() + (sumGDice));
-                                    checkPos(jugador, jugador.getPosicion());
-                                    checkLaps(jugador);
-                                    jugador.setScore(jugador.getScore() + (sumGDice));
+                                    updatePlayer(jugador, sumGDice);
                                     JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nJugador: "
                                             + jugador.getUsuario() + "\nRonda actual: "
                                             + jugador.getLaps() + "\nPosicion: "
                                             + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
                                     doubleCount++;
                                 } else {
-                                    jugador.setPosicion(jugador.getPosicion() + (sumGDice));
-                                    checkPos(jugador, jugador.getPosicion());
-                                    checkLaps(jugador);
-                                    jugador.setScore(jugador.getScore() + (sumGDice));
+                                    updatePlayer(jugador, sumGDice);
                                     JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nJugador: "
                                             + jugador.getUsuario() + "\nRonda actual: "
                                             + jugador.getLaps() + "\nPosicion: "
@@ -94,10 +93,7 @@ public class Juego {
                                 }
                             }
                         } else {
-                            jugador.setPosicion(jugador.getPosicion() + (sumDice));
-                            checkPos(jugador, jugador.getPosicion());
-                            checkLaps(jugador);
-                            jugador.setScore(jugador.getScore() + (sumDice));
+                            updatePlayer(jugador, sumDice);
                             JOptionPane.showMessageDialog(null, "Resultado del turno:" + "\nJugador: "
                                     + jugador.getUsuario() + "\nRonda actual: "
                                     + jugador.getLaps() + "\nPosicion: "
@@ -119,6 +115,13 @@ public class Juego {
             }
         } while (jugar);
         return false;
+    }
+
+    private void updatePlayer(Jugador jugador, int sumDice) {
+        jugador.setPosicion(jugador.getPosicion() + (sumDice));
+        checkPos(jugador, jugador.getPosicion());
+        checkLaps(jugador);
+        jugador.setScore(jugador.getScore() + (sumDice));
     }
 
     public void checkLaps(Jugador jugador) {

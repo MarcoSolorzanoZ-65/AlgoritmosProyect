@@ -59,13 +59,16 @@ public class ListaJugadores {
         return null;
     }
 
-    public Jugador edit(String user, String pass, String newUser, String newPass) {
+    public Jugador edit(String user, String pass, String newPass) {
         Nodo temp = cabeza;
-        while (temp != null) {
-            if (temp.getDato().getUsuario().equals(user)) {
-                temp.getDato().setUsuario(newUser);
+        boolean salir = true;
+        while (temp != null && salir == true) {
+            if (temp.getDato().getUsuario().equals(user) && temp.getDato().getPassword().equals(pass)) {
                 temp.getDato().setPassword(newPass);
                 return temp.getDato();
+            }else{
+                JOptionPane.showMessageDialog(null, "Contraseña invalida!");
+                salir = false;
             }
             temp = temp.getSiguiente();
         }

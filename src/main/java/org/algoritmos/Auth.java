@@ -4,6 +4,7 @@ import org.PlayerRelated.Jugador;
 import org.PlayerRelated.ListaJugadores;
 import org.PlayerRelated.Nodo;
 import org.ReadAndWrite_Players.Dao;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.swing.*;
 
@@ -23,7 +24,7 @@ public class Auth {
 
     public Jugador login() {
         String user = JOptionPane.showInputDialog("Ingrese su nombre de usuario");
-        String pass = JOptionPane.showInputDialog("Ingrese su contraseña");
+        String pass = DigestUtils.md5Hex(JOptionPane.showInputDialog("Ingrese su contraseña"));
 
         Nodo temp = lj.getCabeza();
         while (temp != null) {
@@ -37,9 +38,9 @@ public class Auth {
 
     public boolean register() {
         String user = JOptionPane.showInputDialog("Ingrese su nombre de usuario");
-        String pass = JOptionPane.showInputDialog("Ingrese su contraseña");
+        String pass = DigestUtils.md5Hex(JOptionPane.showInputDialog("Ingrese su  contraseña"));
 
-        String pass2 = JOptionPane.showInputDialog("Confirme su contraseña");
+        String pass2 = DigestUtils.md5Hex(JOptionPane.showInputDialog("Confirme su contraseña"));
 
         Nodo temp = lj.getCabeza();
         while (temp != null) {
