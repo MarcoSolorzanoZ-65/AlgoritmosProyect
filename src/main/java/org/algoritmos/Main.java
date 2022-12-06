@@ -1,5 +1,7 @@
 package org.algoritmos;
 
+import org.Huffman.HuffmanCompresser;
+import org.Huffman.HuffmanNode;
 import org.PlayerRelated.Historial;
 import org.PlayerRelated.Jugador;
 import org.PlayerRelated.ListaHistoriales;
@@ -96,6 +98,11 @@ public class Main {
                                     }
                                     daoH.getLista().ordenar(daoH.getLista().getCabeza());
                                     JOptionPane.showMessageDialog(null, player.getHistorial().imprimir());
+                                    int huffman = Integer.parseInt(JOptionPane.showInputDialog("Desea descargar comprimido?\n1) Si\n2) No"));
+                                    if (huffman == 1) {
+                                        HuffmanCompresser comp = new HuffmanCompresser();
+                                        comp.compress(player.getHistorial().imprimir());
+                                    }
                                 }
                                 case 4 -> {
                                     salir = true;
