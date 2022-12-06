@@ -22,7 +22,7 @@ public class Main {
         while (seguir) {
             int opcion = 0;
             try {
-                opcion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la opcion a elegir: \n1)Login\n2)Registrarse"));
+                opcion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la opcion a elegir: \n1) Login.\n2) Registrarse."));
             } catch (NumberFormatException e) {
                 seguir = false;
             }
@@ -43,9 +43,9 @@ public class Main {
                                 case 1 -> {
                                     int cantBots = 0;
                                     try {
-                                        cantBots = Integer.parseInt(JOptionPane.showInputDialog("Ingrese contra cuantos bots desea jugar (maximo 3)"));
+                                        cantBots = Integer.parseInt(JOptionPane.showInputDialog("Ingrese contra cuantos bots desea jugar (maximo 3)."));
                                     } catch (NumberFormatException e) {
-                                        System.err.println("Error de formato");
+                                        System.err.println("Error de formato.");
                                         salir = true;
                                     }
                                     if (cantBots <= 3 && cantBots > 0) {
@@ -79,7 +79,7 @@ public class Main {
                     try {
                         auth.register();
                     } catch (NullPointerException e) {
-                        System.err.println("Error: null");
+                        System.err.println("Error: null.");
                     }
                 }
                 default -> JOptionPane.showMessageDialog(null, "Opcion invalida!");
