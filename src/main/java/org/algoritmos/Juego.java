@@ -48,7 +48,7 @@ public class Juego {
                     //Para verificar si alguien gano el juego.
                     if (jugador.getScore() >= 84) {
                         jugar = false;
-                        JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                        JOptionPane.showMessageDialog(null, "Felicidades! " + jugador.getUsuario() + " ha ganado!");
                         return true;
                         //Si nadie ha ganado se continua con el juego.
                     } else {
@@ -72,7 +72,7 @@ public class Juego {
                                     + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
                             if (jugador.getScore() >= 84) {
                                 jugar = false;
-                                JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                                JOptionPane.showMessageDialog(null, "Felicidades! " + jugador.getUsuario() + " ha ganado!");
                                 return true;
                             }
                             while (dobles && doubleCount != 2) {
@@ -95,7 +95,7 @@ public class Juego {
                                     doubleCount++;
                                     if (jugador.getScore() >= 84) {
                                         jugar = false;
-                                        JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                                        JOptionPane.showMessageDialog(null, "Felicidades! " + jugador.getUsuario() + " ha ganado!");
                                         return true;
                                     }
                                 } else {
@@ -106,7 +106,7 @@ public class Juego {
                                             + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
                                     if (jugador.getScore() >= 84) {
                                         jugar = false;
-                                        JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                                        JOptionPane.showMessageDialog(null, "Felicidades! " + jugador.getUsuario() + " ha ganado!");
                                         return true;
                                     }
                                     dobles = false;
@@ -120,7 +120,7 @@ public class Juego {
                                     + jugador.getPosicion() + "\nPuntuacion: " + jugador.getScore());
                             if (jugador.getScore() >= 84) {
                                 jugar = false;
-                                JOptionPane.showMessageDialog(null, "Felicidades " + jugador.getUsuario() + " has ganado!");
+                                JOptionPane.showMessageDialog(null, "Felicidades! " + jugador.getUsuario() + " ha ganado!");
                                 return true;
                             }
                         }
@@ -142,6 +142,7 @@ public class Juego {
         } while (jugar);
         return false;
     }
+
 
     private void updatePlayer(Jugador jugador, int sumDice) {
         jugador.setPosicion(jugador.getPosicion() + (sumDice));
