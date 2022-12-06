@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="Cambios en mensajes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Huffman/HuffmanCompresser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Huffman/HuffmanNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Huffman/MyComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Joshua.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marco.txt" beforeDir="false" />
+    <list default="true" id="1883049a-b435-4787-9930-7a76f3ab8e19" name="Changes" comment="huffman">
+      <change beforePath="$PROJECT_DIR$/Massiel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Massiel.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/algoritmos/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuarios.txt" beforeDir="false" />
     </list>
     <list id="c6cce3ad-e30b-4c17-9483-4c233b3ae36a" name="Changes by Joshua" comment="espacio by joshua mas estupido del mundo" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +81,7 @@
       <updated>1670178203023</updated>
       <workItem from="1670178205020" duration="232000" />
       <workItem from="1670178668892" duration="35045000" />
-      <workItem from="1670346784162" duration="12599000" />
+      <workItem from="1670346784162" duration="12735000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1670179504375</created>
@@ -194,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670356159221</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="huffman">
+      <created>1670362036359</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670362036359</updated>
+    </task>
+    <task id="LOCAL-00017" summary="huffman">
+      <created>1670362048973</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670362048973</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +245,8 @@
     <MESSAGE value="Historial terminado sin huffman" />
     <MESSAGE value="espacio by joshua mas estupido del mundo" />
     <MESSAGE value="Cambios en mensajes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en mensajes" />
+    <MESSAGE value="huffman" />
+    <option name="LAST_COMMIT_MESSAGE" value="huffman" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
